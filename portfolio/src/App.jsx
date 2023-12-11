@@ -2,29 +2,33 @@ import React, { useEffect, useState } from 'react'
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
+import Projects from './components/Projects';
 import Footer from './components/Footer'
 
 
+
+
 function App() {
-  const[theme, setTheme] = useState(null);
-  useEffect(() => {
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
-		} else {
-			setTheme('light');
-		}
-	}, []);
-  const handleThemeSwitch = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark');
-	};
+  const[theme, setTheme] = useState(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+      return 'dark';
+    }
+    return 'light'
+  });
+
 
   useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
-	}, []);
+	 if (theme === 'dark'){
+    document.querySelector('html').classList.add('dark')
+   } else {
+    document.querySelector('html').classList.remove('dark')
+   }
+	}, [theme]);
+  const handleThemeSwitch = () => {
+		setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+	};
+
+
 
   
 
@@ -40,10 +44,12 @@ function App() {
     </button>
     <div className='bg:white dark:bg-slate-700 font-league '>
     <div className="max-w-5xl w-11/12 mx-auto max-h-full">
-      <Home/>
-      <Contact/>
+      <Home/> 
+      <Projects/>
       <About/>
+      
       <Footer/>
+    
      
       </div>
       </div>
