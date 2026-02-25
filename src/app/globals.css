@@ -4,9 +4,12 @@
 
 @theme {
   --color-cement: #121212; 
-  --color-ink: #EBEBEB;    
+  --color-ink: #EBEBEB; 
+  --color-charcoal: #1A1A1A;   
   --color-border: #2A2A2A; 
-  --color-safety: #FF5733;
+  --color-secondary: #808080;
+  --color-safety: #FF4F00;
+
 
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);

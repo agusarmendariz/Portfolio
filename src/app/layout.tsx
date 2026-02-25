@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+
 
 
 const plexSans = IBM_Plex_Sans({
@@ -34,7 +34,6 @@ export default function RootLayout({
         className={`${plexSans.variable} ${plexMono.variable} antialiased h-screen overflow-hidden flex flex-col`}
 
       >
-        <Header/>
         <main className="flex-1 overflow-hidden">
           {children}
         </main>
