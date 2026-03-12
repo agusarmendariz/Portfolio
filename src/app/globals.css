@@ -30,3 +30,7 @@ html, body, section, div {
 *::-webkit-scrollbar {
   display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
