@@ -31,12 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plexSans.variable} ${plexMono.variable} antialiased h-screen overflow-hidden flex flex-col`}
+        className={`${plexSans.variable} ${plexMono.variable} antialiased`}
 
       >
-        <main className="flex-1 overflow-hidden">
+      
           {children}
-        </main>
+       
       </body>
     </html>
   );
