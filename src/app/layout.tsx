@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import DarkMode from "@/components/DarkMode";
 
 
 
@@ -29,14 +30,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${plexSans.variable} ${plexMono.variable} antialiased`}
 
       >
-      
+      <DarkMode>
           {children}
-       
+       </DarkMode>
       </body>
     </html>
   );

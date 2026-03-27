@@ -4,36 +4,39 @@ interface ProjectProps {
   href: string;
 }
 
-export default function ProjectCard({ title, description,href }: ProjectProps) {
+export default function ProjectCard({ title, description, href }: ProjectProps) {
   return (
+  
     <a 
       href={href} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="w-full group block border-t border-border/30 first:border-t-0 transition-all duration-500 hover:bg-cement/10 cursor-pointer"
+     
+      className="w-full group block border-t border-border/20 first:border-t-0 transition-all duration-300 hover:bg-cement/40"
     >
-    <div className="w-full group border-t border-border/30 first:border-t-0 transition-all duration-500 hover:bg-cement/10">
-      
-      <div className="px-10 py-12 flex flex-col md:flex-row md:items-baseline justify-between gap-10">
-        
-        <div className="md:w-1/4">
-          <h3 className="text-base font-bold uppercase tracking-wider text-ink font-ibm-plex">
+   
+      <div className="px-10 py-6 flex items-center justify-between gap-8">
+  
+        <div className="w-[120px] shrink-0">
+          <h3 className="text-[13px] font-bold uppercase tracking-tight text-ink font-ibm-plex group-hover:translate-x-1 transition-transform duration-300">
             {title}
           </h3>
         </div>
 
-        <div className="flex-1 max-w-xl">
-          <p className="text-base text-secondary leading-relaxed font-ibm-plex transition-colors duration-500 group-hover:text-ink">
+       
+        <div className="flex-1">
+          <p className="text-[13px] text-secondary leading-snug font-ibm-plex transition-colors duration-300 group-hover:text-ink">
             {description}
           </p>
         </div>
 
-        <div className="text-secondary/50 group-hover:text-ink transition-all duration-500 group-hover:rotate-45 text-2xl">
+        
+        <div className="text-secondary/40 group-hover:text-ink transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 text-lg font-light">
           ↗
         </div>
 
       </div>
-    </div>
     </a>
+   
   );
 }

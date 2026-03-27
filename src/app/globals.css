@@ -3,6 +3,7 @@
 
 
 @theme {
+  /* Variables base (Light) */
   --color-cement: #F7F7F7;
   --color-card: #FFFFFF;
   --color-ink: #1A1A1A;  
@@ -10,24 +11,23 @@
   --color-secondary: #707070;
   --color-safety: #FF5733;
 
-  --dark-cement: #0A0A0A;
-  --dark-ink: #F7F7F7;
-  --dark-secondary: #A1A1AA;
-  --dark-border: #27272A;
-  
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 }
 
 @layer base {
+  .dark {
+    --color-cement: #0A0A0A;
+    --color-ink: #F7F7F7;
+    --color-secondary: #A1A1AA;
+    --color-border: #27272A;
+    --color-card: #141414; 
+  }
+
   body {
-    @apply bg-cement text-ink; 
+    @apply bg-cement text-ink transition-colors duration-500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  .dark body {
-    background-color: var(--dark-cement);
-    color: var(--dark-ink);
   }
 }
 
