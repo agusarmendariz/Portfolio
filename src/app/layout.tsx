@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import DarkMode from "@/components/DarkMode";
+import { Toaster } from 'sonner'
 
 
 
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
       <DarkMode>
           {children}
+          <Toaster position="bottom-right" theme="dark" closeButton />
        </DarkMode>
       </body>
     </html>

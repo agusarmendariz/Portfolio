@@ -21,12 +21,12 @@ export default function Footer() {
     return (
         <div className="border-t border-border/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
         
-        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-mono text-[12px] uppercase tracking-wider text-secondary/40">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-mono text-[12px]  tracking-wider text-secondary">
           <span>Mendoza, AR.</span>
           <span className="hidden md:block text-secondary/10">•</span>
           <p>
-            © 2026 <span className="text-secondary/60">Agustina Armendariz</span> 
-            <span className="mx-2 text-secondary/10">—</span> 
+            © 2026 <span className="text-secondary uppercase">Agustina Armendariz</span> 
+            <span className="mx-2 text-secondary">—</span> 
             Built with Next.js & Tailwind
           </p>
         </div>
@@ -42,11 +42,11 @@ export default function Footer() {
             <Sun size={13} strokeWidth={1.5} />
           </button>
           
-          <span className="w-[1px] h-3 bg-border/10"></span>
+          <span className="w-[1px] h-3 bg-border"></span>
           
           <button 
           onClick={() => setTheme('dark')}
-            className={`p-1 transition-colors ${theme === 'dark' ? 'text-ink' : 'text-secondary/20 hover:text-ink'}`}
+            className={`p-1 transition-colors ${theme === 'dark' ? 'text-ink' : 'text-secondary hover:text-ink'}`}
             title="Dark Mode"
           >
             <Moon size={13} strokeWidth={1.5} />

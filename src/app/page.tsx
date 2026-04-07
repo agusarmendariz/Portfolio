@@ -44,13 +44,13 @@ export default function Home() {
             <div className="flex flex-col">
               <ProjectCard 
                 title="TrainX" 
-                description="Plataforma de entrenamiento enfocada en rendimiento y métricas avanzadas." 
-                href="#"
+                description="Plataforma de gestión de reservas y planes de gimnasio con enfoque en organización y experiencia del usuario." 
+                href="https://trainx-front.vercel.app/"
               />
               <ProjectCard 
                 title="Insspira" 
-                description="Curaduría visual y recursos para creativos digitales." 
-                href="#"
+                description="Plataforma para descubrir y compartir inspiración visual con enfoque en interacción y creación de contenido." 
+                href="https://insspira-front.vercel.app/"
               />
               <ProjectCard 
                 title="Applestore" 

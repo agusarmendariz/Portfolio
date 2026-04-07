@@ -1,5 +1,19 @@
+'use client'
 
+import { toast } from 'sonner'
 export default function Contact() {
+const email = "armendarizagustina.m@gmail.com"
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email)
+  
+    toast.success('Email copiado', {
+      description: 'Ya podés pegarlo en tu bandeja de entrada.',
+      duration: 3000,
+    })
+  }
+
+
     return(
         <div className="space-y-8">
 
@@ -7,12 +21,17 @@ export default function Contact() {
     Contacto
   </p>
         <div className="flex flex-col gap-6 font-ibm-plex text-[14px] tracking-tight">
-          <div className="pt-2">
-      <p className="text-secondary uppercase text-[10px] font-mono tracking-widest mb-1">Email</p>
-      <p className="text-ink">
-        armendarizagustina.m@gmail.com
-      </p>
-    </div>
+      <div 
+        className="pt-2 group cursor-pointer" 
+        onClick={handleCopy}
+      >
+        <p className="text-secondary/40 uppercase text-[10px] font-mono tracking-widest mb-1 group-hover:text-secondary transition-colors">
+          Email — Click para copiar
+        </p>
+        <p className="text-ink border-b border-transparent group-hover:border-border/40 inline-block pb-0.5 transition-all">
+          {email}
+        </p>
+      </div>
 
     <div className="flex gap-8">
  

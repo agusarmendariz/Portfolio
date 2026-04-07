@@ -32,7 +32,7 @@ const activity = [
 export default function Feed() {
   return (
     <div className="font-ibm-plex">
-      <p className="font-mono text-[12px] uppercase tracking-[0.3em] text-secondary/60 mb-10 ">
+      <p className="font-mono text-[12px] uppercase tracking-[0.3em] text-secondary mb-10 ">
         Interes / Consumo
       </p>
 
@@ -59,7 +59,7 @@ export default function Feed() {
      
             <div className="flex flex-col flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-0.5">
-                <span className="font-mono text-[9px] uppercase text-secondary/30 tracking-widest">
+                <span className="font-mono text-[9px] uppercase text-secondary tracking-widest">
                   {item.category}
                 </span>
               </div>
@@ -68,8 +68,7 @@ export default function Feed() {
               </p>
             </div>
 
-            {/* La Flecha: Josh usa una flecha muy fina y minimalista */}
-            <div className="text-secondary/10 group-hover:text-ink transition-all duration-500 transform group-hover:translate-x-1 pr-2">
+            <div className="text-secondary group-hover:text-ink transition-all duration-500 transform group-hover:translate-x-1 pr-2">
               <span className="text-xl font-extralight leading-none">→</span>
             </div>
           </a>
