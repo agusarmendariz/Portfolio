@@ -15,7 +15,7 @@ export default function Home() {
           <Profile />
         </section>
 
-        <section className="bg-card rounded-2xl p-8 border border-border/40 shadow-sm">
+        <section id="contacto" className="bg-card rounded-2xl p-8 border border-border/40 shadow-sm">
           <Contact />
         </section>
 
@@ -28,7 +28,7 @@ export default function Home() {
               ¿Buscás transformar una idea compleja en una interfaz que se sienta intuitiva?
             </h2>
             <div className="mt-8">
-              <a href="mailto:armendarizagustina.m@gmail.com" className="text-[11px] font-mono uppercase tracking-widest text-secondary hover:text-ink border-b border-border pb-1 transition-all">
+              <a href="#contacto" className="text-[11px] font-mono uppercase tracking-widest text-secondary hover:text-ink border-b border-border pb-1 transition-all">
                 Contactame ↗
               </a>
             </div>
